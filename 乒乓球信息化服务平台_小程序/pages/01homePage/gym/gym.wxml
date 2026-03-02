@@ -1,0 +1,143 @@
+<!-- 搜索框 -->
+<view class="globalSearch">
+    <navigator url="/pages/01homePage/selectedCitys/selectedCitys" style="margin: 0rpx 10rpx 30rpx;" hover-class="none">
+        <image src="/images/Location.png" style="width: 20rpx; height: 20rpx; margin: 40rpx 10rpx 0rpx 20rpx"/>
+        <text class="cityName">{{cityName}}</text>
+    </navigator>
+    <view class="search">
+        <navigator url="/pages/01homePage/search/search"  hover-class="none">
+        <text style="border-radius: 25rpx;">搜索</text>
+    </navigator>
+    </view>
+</view>
+<!-- 功能区域 -->
+<view class="sports-container">
+  <!-- 顶部导航栏 -->
+  <view class="nav-container">
+    <scroll-view 
+      scroll-x="true" 
+      class="nav-scroll"
+      scroll-into-view="nav-{{currentIndex}}"
+      scroll-with-animation="true"
+    >
+      <view 
+        wx:for="{{navItems}}" 
+        wx:key="index"
+        id="nav-{{index}}"
+        class="nav-item {{currentIndex === index ? 'active' : ''}}"
+        bindtap="switchTab"
+        data-index="{{index}}"
+      >
+        <text class="nav-text">{{item.name}}</text>
+        <view class="nav-underline" wx:if="{{currentIndex === index}}"></view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 轮播图 -->
+  <view class="swiper-container">
+    <swiper 
+      autoplay="{{true}}" 
+      interval="{{3000}}" 
+      duration="{{500}}"
+      circular="{{true}}"
+    >
+    <block wx:for="{{swiperList}}" wx:key="id">
+        <swiper-item>
+            <image 
+            class="swiper-image" 
+            src="{{item.image}}" 
+            ></image>
+        </swiper-item>
+    </block>
+    </swiper>
+  </view>
+  <!-- 内容区域 -->
+  <view class="content-container">
+    <!-- 同城场馆 -->
+    <view class="content-tab {{currentIndex === 0 ? 'show' : ''}}" wx:if="{{currentIndex === 0}}">
+      <view class="tab-content">
+        <view class="section-title">同城乒乓球场馆</view>
+        <view class="venue-list">
+          <view class="venue-item" wx:for="{{venueList}}" wx:key="id">
+            <image class="venue-image" src="{{item.image}}" mode="aspectFill"></image>
+            <view class="venue-info">
+              <view class="venue-name">{{item.name}}</view>
+              <view class="venue-address">{{item.address}}</view>
+              <view class="venue-meta">
+                <text class="venue-distance">{{item.distance}}km</text>
+                <text class="venue-price">¥{{item.price}}/小时</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 场馆赛事 -->
+    <view class="content-tab {{currentIndex === 1 ? 'show' : ''}}" wx:if="{{currentIndex === 1}}">
+      <view class="tab-content">
+        <view class="section-title">近期赛事活动</view>
+        <view class="event-list">
+          <view class="event-item" wx:for="{{eventList}}" wx:key="id">
+            <view class="event-date">
+              <text class="event-month">{{item.month}}</text>
+              <text class="event-day">{{item.day}}</text>
+            </view>
+            <view class="event-info">
+              <view class="event-name">{{item.name}}</view>
+              <view class="event-time">{{item.time}}</view>
+              <view class="event-location">{{item.location}}</view>
+            </view>
+            <view class="event-status {{item.status === '报名中' ? 'status-active' : 'status-ended'}}">
+              {{item.status}}
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 在线教学 -->
+    <view class="content-tab {{currentIndex === 2 ? 'show' : ''}}" wx:if="{{currentIndex === 2}}">
+      <view class="tab-content">
+        <view class="section-title">在线教学课程</view>
+        <view class="course-list">
+          <view class="course-item" wx:for="{{courseList}}" wx:key="id">
+            <image class="course-image" src="{{item.image}}" mode="aspectFill"></image>
+            <view class="course-info">
+              <view class="course-name">{{item.name}}</view>
+              <view class="course-teacher">讲师：{{item.teacher}}</view>
+              <view class="course-meta">
+                <text class="course-duration">{{item.duration}}分钟</text>
+                <text class="course-price">¥{{item.price}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 教练预约 -->
+    <view class="content-tab {{currentIndex === 3 ? 'show' : ''}}" wx:if="{{currentIndex === 3}}">
+      <view class="tab-content">
+        <view class="section-title">专业教练预约</view>
+        <view class="coach-list">
+          <view class="coach-item" wx:for="{{coachList}}" wx:key="id">
+            <image class="coach-avatar" src="{{item.avatar}}" mode="aspectFill"></image>
+            <view class="coach-info">
+              <view class="coach-name">{{item.name}}</view>
+              <view class="coach-specialty">{{item.specialty}}</view>
+              <view class="coach-meta">
+                <text class="coach-rating">评分：{{item.rating}}</text>
+                <text class="coach-price">¥{{item.price}}/小时</text>
+              </view>
+            </view>
+            <button class="coach-btn" bindtap="reserveCoach" data-coach="{{item}}">
+              立即预约
+            </button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

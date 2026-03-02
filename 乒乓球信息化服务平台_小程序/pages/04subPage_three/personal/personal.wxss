@@ -1,0 +1,171 @@
+/* 全局样式 */
+.profile-container {
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  /* 用户信息头部 */
+  .profile-header {
+    background: linear-gradient(135deg, #e62323 0%, #dfdc31 100%);
+    color: white;
+    padding: 40rpx 30rpx;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40rpx;
+  }
+  
+  .user-avatar {
+    width: 160rpx;
+    height: 160rpx;
+    border-radius: 50%;
+    border: 4rpx solid rgba(255, 255, 255, 0.3);
+    margin-right: 30rpx;
+  }
+  
+  .user-details {
+    flex: 1;
+  }
+  
+  .user-name {
+    font-size: 40rpx;
+    font-weight: 600;
+    margin-bottom: 10rpx;
+  }
+  
+  .user-level {
+    font-size: 28rpx;
+    opacity: 0.8;
+    margin-bottom: 15rpx;
+  }
+  
+  .user-signature {
+    font-size: 26rpx;
+    opacity: 0.9;
+    line-height: 1.4;
+  }
+  
+  .edit-btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2rpx solid white;
+    border-radius: 20rpx;
+    padding: 15rpx 25rpx;
+    font-size: 26rpx;
+  }
+  
+  /* 用户统计信息 */
+  .user-stats {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 16rpx;
+    padding: 30rpx 0;
+  }
+  
+  .stat-item {
+    text-align: center;
+    padding: 20rpx;
+    border-radius: 12rpx;
+    transition: background-color 0.3s ease;
+  }
+  
+  .stat-item:active {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .stat-value {
+    font-size: 36rpx;
+    font-weight: 600;
+    margin-bottom: 10rpx;
+  }
+  
+  .stat-label {
+    font-size: 24rpx;
+    opacity: 0.8;
+  }
+  
+  /* 功能菜单 */
+  .profile-menu {
+    padding: 20rpx;
+  }
+  
+  .menu-section {
+    background-color: white;
+    border-radius: 16rpx;
+    margin-bottom: 20rpx;
+    overflow: hidden;
+  }
+  
+  .menu-title {
+    font-size: 32rpx;
+    font-weight: 600;
+    color: #333;
+    padding: 30rpx;
+    border-bottom: 1rpx solid #f0f0f0;
+    background-color: #fafafa;
+  }
+  
+  .menu-items {
+    padding: 10rpx 0;
+  }
+  
+  .menu-item {
+    display: flex;
+    align-items: center;
+    padding: 30rpx;
+    border-bottom: 1rpx solid #f0f0f0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .menu-item:last-child {
+    border-bottom: none;
+  }
+  
+  .menu-item:active {
+    background-color: #f5f5f5;
+  }
+  
+  .menu-icon {
+    font-size: 36rpx;
+    margin-right: 30rpx;
+    width: 40rpx;
+    text-align: center;
+  }
+  
+  .menu-text {
+    flex: 1;
+    font-size: 32rpx;
+    color: #333;
+  }
+  
+  .menu-arrow {
+    font-size: 28rpx;
+    color: #ccc;
+  }
+  
+  .menu-badge {
+    background-color: #ff4757;
+    color: white;
+    font-size: 22rpx;
+    padding: 5rpx 12rpx;
+    border-radius: 10rpx;
+    margin-right: 20rpx;
+  }
+  
+  /* 退出登录按钮 */
+  .logout-section {
+    padding: 40rpx 30rpx;
+  }
+  
+  .logout-btn {
+    background-color: #ff4757;
+    color: white;
+    border-radius: 16rpx;
+    padding: 25rpx;
+    font-size: 32rpx;
+    width: 100%;
+  }

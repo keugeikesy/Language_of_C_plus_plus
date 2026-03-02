@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="equipment-detail">
+    <image 
+      class="equipment-image" 
+      src="{{equipment.image}}"
+      mode="aspectFill"
+    />
+    <view class="equipment-info">
+      <view class="equipment-name">{{equipment.name}}</view>
+      <view class="equipment-brand">品牌：{{equipment.brand}}</view>
+      <view class="equipment-price">¥{{equipment.price}}</view>
+      <view class="equipment-description">{{equipment.description}}</view>
+    </view>
+    <view class="equipment-actions">
+      <button 
+        class="collect-btn {{equipment.isCollected ? 'collected' : ''}}"
+        bindtap="onCollect"
+      >
+        {{equipment.isCollected ? '已收藏' : '收藏'}}
+      </button>
+      <button 
+        class="buy-btn"
+        bindtap="onBuy"
+      >
+        立即购买
+      </button>
+    </view>
+  </view>
+</view>

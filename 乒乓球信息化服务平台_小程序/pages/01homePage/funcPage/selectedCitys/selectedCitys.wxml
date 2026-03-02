@@ -1,0 +1,9 @@
+<!-- 定位 -->
+<view class="location">当前城市</view>
+<!-- 当前城市名称 -->
+<button class="getLocation" size="mini">{{nowCityNames}}</button>
+<view class="hotcity">选择城市</view>
+<!-- 可选择城市 -->
+<block wx:for="{{hotCitys}}" wx:key='index'>
+    <button  class='cityList' size="mini" bindtap="selectCity" data-city="{{item}}">{{item}}</button>
+</block>

@@ -1,0 +1,56 @@
+{
+    "pages": [
+        "pages/01homePage/gym/gym",
+        "pages/01homePage/funcPage/search/search",
+        "pages/01homePage/funcPage/selectedCitys/selectedCitys",
+        "pages/01homePage/funcPage/gymDetials/gymDetials",
+        "pages/01homePage/funcPage/matchDetials/matchDetials",
+        "pages/01homePage/funcPage/teachDeials/teachDeials",
+        "pages/02subPage_one/Tools/Tools",
+        "pages/02subPage_one/funPage/detials/detials",
+        "pages/03subPage_two/community/community",
+        "pages/03subPage_two/funPage/post/post",
+        "pages/04subPage_three/personal/personal",
+        "pages/04subPage_three/funPage/editPersonal/editPersonal",
+        "pages/04subPage_three/funPage/hitoryMatch/hitoryMatch",
+        "pages/04subPage_three/funPage/totalOrder/totalOrder",
+        "pages/04subPage_three/funPage/favoriteText/favoriteText",
+        "pages/04subPage_three/funPage/favoriteGym/favoriteGym"
+    ],
+    "entryPagePath": "pages/01homePage/gym/gym",
+    "window": {
+        "navigationBarBackgroundColor": "#FF0000",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "position": "bottom",
+        "color": "#000000",
+        "selectedColor": "#FF0000",
+        "list": [
+            {
+                "pagePath": "pages/01homePage/gym/gym",
+                "iconPath": "images/unselGym.png",
+                "selectedIconPath": "images/selGym.png",
+                "text": "场馆"
+            },
+            {
+                "pagePath": "pages/02subPage_one/Tools/Tools",
+                "iconPath": "images/unselEquipment.png",
+                "selectedIconPath": "images/selEquipment.png",
+                "text": "器材"
+            },
+            {
+                "pagePath": "pages/03subPage_two/community/community",
+                "iconPath": "images/unselCommunity.png",
+                "selectedIconPath": "images/selCommunity.png",
+                "text": "论坛"
+            },
+            {
+                "pagePath": "pages/04subPage_three/personal/personal",
+                "iconPath": "images/unselPersonal.png",
+                "selectedIconPath": "images/selPersonal.png",
+                "text": "我的"
+            }
+        ]
+    }
+}

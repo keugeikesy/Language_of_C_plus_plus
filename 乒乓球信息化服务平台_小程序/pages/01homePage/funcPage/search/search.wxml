@@ -1,6 +1,0 @@
-<!-- 搜索框 -->
-<view class="searchArea">
-    <view class="searchItem">
-        <input type="text" focus='ture' maxlength="10" placeholder="请输入搜索内容"></input>
-    </view>
-</view>
